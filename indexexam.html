@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exam</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/custumstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<script type="text/javascript">
+		$("document").ready(function(){
+			localStorage.clear();
+			$(".enter").click(function(){
+				if($("#stuname").val() === "")
+				{
+					$("#entername").html("Please enter name");
+					location.reload();
+				}
+				else{
+				localStorage.setItem("name",$("#stuname").val());
+				window.location.href="q1.html";
+
+			}
+				
+
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<h3 id="entername"></h3>
+		<div class="col-lg-12 text-center">
+			<h3>Welcom To UpSkilling Exam </h3>
+			<h2>Good luck!</h2>
+			
+				<label for="name">Enter Your Name</label>
+				<input type="text" name="name" id="stuname">
+				<br>
+				<button class="btn btn-primary enter">Start Exam</button>
+			
+
+			<h1 class="pt-5">Note:</h1>
+			<h3>This Exam contain 10 Question Need to Be Answered, You have 25s for each Question .</h3>
+			<h3>Please press Start Exam to </h3>
+		</div>
+	</div>
+</div>
+</body>
+</html>
