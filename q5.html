@@ -23,18 +23,10 @@
 					window.location.href="q6.html";
 				}
 				// get answer
-			var answer5;
-			
-			if($("#option1").prop("checked")){answer5 ="option1"; }
-			else if($("#option2").prop("checked")){answer5 ="option2";}
-			else if($("#option3").prop("checked")){answer5 ="option3";}
-			else if($("#option4").prop("checked")){answer5 ="option4";}
-			else{answer5=" ";}
-			localStorage.setItem("answer5",answer5);
+			var answer5= $("input[name='answer']:checked").val();
+			 localStorage.setItem("answer5",answer5);	
+			 console.log(answer5);
 			}
-			
-		
-
 		});
 	</script>
 </head>
@@ -53,19 +45,19 @@
 
 			<form action="q6.html" id="form5">
 				<div >
-					<input type="radio" id="option1" name="answer" >
+					<input type="radio" id="option1" name="answer" value="Less server interaction">
 					<label  for="n1" id="n11">Less server interaction</label>
 				</div>  
 				<div>
-					<input type="radio" id="option2" name="answer">
+					<input type="radio" id="option2" name="answer" value="Immediate feedback to the visitors">
 					<label for="n2" id="n22">Immediate feedback to the visitors</label>
 				</div>
 				<div>
-					<input type="radio" id="option3" name="answer" >
+					<input type="radio" id="option3" name="answer" value="Increased interactivity">
 					<label for="n3" id="n33"> Increased interactivity</label>
 				</div>
 				<div>
-					<input type="radio" id="option4" name="answer">
+					<input type="radio" id="option4" name="answer" value="All of the above.">
 					<label for="n4" id="n44"> All of the above.</label>
 				</div>
 				<br>

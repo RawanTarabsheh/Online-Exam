@@ -12,18 +12,18 @@
 			var x= localStorage.getItem("name");
 			$("#name").html("Welcome "+x);
 			// array correct answer
-			var correctanswer=[" ","option1","option4","option4","option3","option4","option2","option3","option3","option1","option4"]
+			var correctanswer=[" ","$","All of the above.","All of the above.","Both of the above.","All of the above.","concat()","charAt()","Both of the above.","window.print();","window.location='http://www.newlocation.com';"]
 			var mark=0;
 
 				 for (var i = 1; i <=10 ; i++) {
 				 var user=localStorage.getItem("answer"+i);
 				var correct=correctanswer[i];
-				if(user == " ")
+				if(user == "" || user=="undefined")
 						$("#q"+i).html("no answer");
 					else
 				$("#q"+i).html(user);
 
-				if(user== correct){
+				if(user == correct){
 					$("#q"+i).css("color","green");
 					mark++;}
 				else
@@ -45,61 +45,61 @@
 				<h3 id="name"> </h3>
 				<h4 id="totalmark"></h4>
 				
-				 <table  class="table border">
+				 <table  class="table border ">
         <tr>
-            <td width="600px" class="font-weight-bolder">Question</td>
-            <td width="300px" class="font-weight-bolder">Correct answer</td>
-            <td width="300px" class="font-weight-bolder">Your answer</td>
+            <td style="width: 1000px;" class="font-weight-bolder">Question</td>
+            <td  class="font-weight-bolder">Correct answer</td>
+            <td  class="font-weight-bolder">Your answer</td>
         </tr>
          <tr>
-            <td class="font-weight-bolder">Q 1 -Which sign does jQuery use as a shortcut for jQuery? </td>
-            <td  id="true1">$</td>
+            <td>Q 1 -Which sign does jQuery use as a shortcut for jQuery? </td>
+            <td >$</td>
             <td id="q1"></td>
         </tr>
          <tr>
-            <td class="font-weight-bolder">Q 2 - Which of the following is correct about JavaScript?</td>
-            <td  id="true2">All of the above.</td>
+            <td>Q 2 - Which of the following is correct about JavaScript?</td>
+            <td >All of the above.</td>
             <td id="q2"></td>
         </tr>
                  <tr>
-            <td class="font-weight-bolder">Q 3 - Which of the following is correct about features of JavaScript?</td>
-            <td id="true3">All of the above.</td>
+            <td>Q 3 - Which of the following is correct about features of JavaScript?</td>
+            <td>All of the above.</td>
             <td id="q3"></td>
         </tr>
            <tr>
-            <td class="font-weight-bolder">Q 4 - Which of the following is correct about features of JavaScript?</td>
-            <td id="true4">Both of the above.</td>
+            <td>Q 4 - Which of the following is correct about features of JavaScript?</td>
+            <td>Both of the above.</td>
             <td id="q4"></td>
         </tr>
            <tr>
-            <td class="font-weight-bolder">Q 5 - Which of the following is an advantage of using JavaScript?</td>
-            <td id="true5"> All of the above.</td>
+            <td >Q 5 - Which of the following is an advantage of using JavaScript?</td>
+            <td> All of the above.</td>
             <td id="q5"></td>
         </tr>
            <tr>
-            <td class="font-weight-bolder">Q 6 - Which built-in method combines the text of two strings and returns a new string?</td>
+            <td >Q 6 - Which built-in method combines the text of two strings and returns a new string?</td>
             <td id="true6">concat()</td>
             <td id="q6"></td>
         </tr>
            <tr>
-            <td class="font-weight-bolder">Q 7 - Which built-in method returns the character at the specified index?</td>
-            <td id="true7">charAt()</td>
+            <td >Q 7 - Which built-in method returns the character at the specified index?</td>
+            <td>charAt()</td>
             <td id="q7"></td>
         </tr>
            <tr>
-            <td class="font-weight-bolder">Q 8 - Which of the following is a valid type of function javascript supports?</td>
-            <td id="true8">Both of the above.</td>
+            <td >Q 8 - Which of the following is a valid type of function javascript supports?</td>
+            <td>Both of the above.</td>
             <td id="q8"></td>
         </tr>
         
            <tr>
-            <td class="font-weight-bolder">Q 9- Which of the following is the correct syntax to print a page using JavaScript? </td>
-            <td id="true9"> window.print();</td>
+            <td >Q 9- Which of the following is the correct syntax to print a page using JavaScript? </td>
+            <td> window.print();</td>
             <td id="q9"></td>
         </tr>
            <tr>
-            <td class="font-weight-bolder">Q 10 - Which of the following is the correct syntax to redirect a url using JavaScript? </td>
-            <td id="true10">window.location='http://www.newlocation.com';</td>
+            <td>Q 10 - Which of the following is the correct syntax to redirect a url using JavaScript? </td>
+            <td>window.location='http://www.newlocation.com';</td>
             <td id="q10"></td>
         </tr>
 					

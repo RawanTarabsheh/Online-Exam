@@ -23,18 +23,10 @@
 					window.location.href="q5.html";
 				}
 					// get answer
-			var answer4;
-			
-			if($("#option1").prop("checked")){answer4 ="option1";}
-			else if($("#option2").prop("checked")){answer4 ="option2";}
-			else if($("#option3").prop("checked")){answer4 ="option3";}
-			else if($("#option4").prop("checked")){answer4 ="option4";}
-			else{answer4=" ";}
-			localStorage.setItem("answer4",answer4);
+			 var answer4= $("input[name='answer']:checked").val();
+			 localStorage.setItem("answer4",answer4);	
+			 console.log(answer4);
 			}
-		
-		
-
 		});
 	</script>
 </head>
@@ -53,19 +45,19 @@
 
 			<form action="q5.html" id="form4">
 				<div >
-					<input type="radio" id="option1" name="answer" >
+					<input type="radio" id="option1" name="answer" value="JavaScript is is complementary to and integrated with HTML.">
 					<label  for="n1" id="n11">JavaScript is is complementary to and integrated with HTML.</label>
 				</div>  
 				<div>
-					<input type="radio" id="option2" name="answer">
+					<input type="radio" id="option2" name="answer" value="JavaScript is open and cross-platform.">
 					<label for="n2" id="n22">JavaScript is open and cross-platform.</label>
 				</div>
 				<div>
-					<input type="radio" id="option3" name="answer" >
+					<input type="radio" id="option3" name="answer" value="Both of the above.">
 					<label for="n3" id="n33">Both of the above.</label>
 				</div>
 				<div>
-					<input type="radio" id="option4" name="answer">
+					<input type="radio" id="option4" name="answer" value="All of the above.">
 					<label for="n4" id="n44">All of the above.</label>
 				</div>
 				<br>

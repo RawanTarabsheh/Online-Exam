@@ -23,16 +23,10 @@
 					window.location.href="q9.html";
 				}
 				// get answer
-			var answer8;
-			
-			if($("#option1").prop("checked")){answer8 ="option1";}
-			else if($("#option2").prop("checked")){answer8 ="option2";}
-			else if($("#option3").prop("checked")){answer8 ="option3"; }
-			else if($("#option4").prop("checked")){answer8 ="option4";}
-			else{answer8=" ";}
-			localStorage.setItem("answer8",answer8);
+			var answer8= $("input[name= 'answer']:checked").val();
+			 localStorage.setItem("answer8",answer8);	
+			 console.log(answer8);
 			}
-			
 		});
 	</script>
 </head>
@@ -51,19 +45,19 @@
 
 			<form action="q9.html" id="form8">
 				<div >
-					<input type="radio" id="option1" name="answer" >
+					<input type="radio" id="option1" name="answer" value="named function">
 					<label  for="n1" id="n11"> named function</label>
 				</div>  
 				<div>
-					<input type="radio" id="option2" name="answer">
+					<input type="radio" id="option2" name="answer" value="anonymous function">
 					<label for="n2" id="n22">anonymous function</label>
 				</div>
 				<div>
-					<input type="radio" id="option3" name="answer" >
+					<input type="radio" id="option3" name="answer" value="Both of the above.">
 					<label for="n3" id="n33">Both of the above.</label>
 				</div>
 				<div>
-					<input type="radio" id="option4" name="answer">
+					<input type="radio" id="option4" name="answer" value="None of the above.">
 					<label for="n4" id="n44">None of the above.</label>
 				</div>
 				<br>

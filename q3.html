@@ -23,14 +23,9 @@
 					window.location.href="q4.html";
 				}
 				// get answer
-			var answer3;
-			
-			if($("#option1").prop("checked")){answer3 ="option1"; }
-			else if($("#option2").prop("checked")){answer3 ="option2";}
-			else if($("#option3").prop("checked")){answer3 ="option3";}
-			else if($("#option4").prop("checked")){answer3 ="option4";}
-			else{answer3=" ";}
-			localStorage.setItem("answer3",answer3);
+			 var answer3= $("input[name='answer']:checked").val();
+			 localStorage.setItem("answer3",answer3);	
+			 console.log(answer3);
 			}
 			
 		});
@@ -51,19 +46,19 @@
 
 			<form action="q4.html" id="form3">
 				<div >
-					<input type="radio" id="option1" name="answer" >
+					<input type="radio" id="option1" name="answer" value="JavaScript is a lightweight, interpreted programming language.">
 					<label  for="n1" id="n11">JavaScript is a lightweight, interpreted programming language.</label>
 				</div>  
 				<div>
-					<input type="radio" id="option2" name="answer">
+					<input type="radio" id="option2" name="answer" value="JavaScript is designed for creating network-centric applications.">
 					<label for="n2" id="n22">JavaScript is designed for creating network-centric applications.</label>
 				</div>
 				<div>
-					<input type="radio" id="option3" name="answer" >
+					<input type="radio" id="option3" name="answer" value="JavaScript is complementary to and integrated with Java.">
 					<label for="n3" id="n33"> JavaScript is complementary to and integrated with Java.</label>
 				</div>
 				<div>
-					<input type="radio" id="option4" name="answer">
+					<input type="radio" id="option4" name="answer" value="All of the above.">
 					<label for="n4" id="n44">All of the above.</label>
 				</div>
 				<br>

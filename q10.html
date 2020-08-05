@@ -23,13 +23,9 @@
 					window.location.href="result.html";
 				}
 				// get answer
-			var answer10;
-			if($("#option1").prop("checked")){answer10 ="option1"; }
-			else if($("#option2").prop("checked")){answer10 ="option2";}
-			else if($("#option3").prop("checked")){answer10 ="option3";}
-			else if($("#option4").prop("checked")){answer10 ="option4";}
-			else{answer10=" ";}
-			localStorage.setItem("answer10",answer10);
+			var answer10= $("input[name= 'answer']:checked").val();
+			 localStorage.setItem("answer10",answer10);	
+			 console.log(answer10);
 			}
 			
 		
@@ -52,19 +48,19 @@
 
 			<form action="result.html" id="form10">
 				<div >
-					<input type="radio" id="option1" name="answer" >
+					<input type="radio" id="option1" name="answer" value="document.location='http://www.newlocation.com';">
 					<label  for="n1" id="n11">document.location='http://www.newlocation.com';</label>
 				</div>  
 				<div>
-					<input type="radio" id="option2" name="answer">
+					<input type="radio" id="option2" name="answer" value="browser.location='http://www.newlocation.com';">
 					<label for="n2" id="n22">browser.location='http://www.newlocation.com';</label>
 				</div>
 				<div>
-					<input type="radio" id="option3" name="answer" >
+					<input type="radio" id="option3" name="answer" value="navigator.location='http://www.newlocation.com';">
 					<label for="n3" id="n33">navigator.location='http://www.newlocation.com';</label>
 				</div>
 				<div>
-					<input type="radio" id="option4" name="answer">
+					<input type="radio" id="option4" name="answer" value="window.location='http://www.newlocation.com';">
 					<label for="n4" id="n44">window.location='http://www.newlocation.com';</label>
 				</div>
 				<br>

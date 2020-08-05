@@ -23,14 +23,9 @@
 					window.location.href="q3.html";
 				}
 				// get answer
-			var answer2;
-			if($("#option1").prop("checked")){answer2 ="option1"; }
-			else if($("#option2").prop("checked")){answer2 ="option2";}
-			else if($("#option3").prop("checked")){answer2 ="option3";}
-			else if($("#option4").prop("checked")){answer2 ="option4"; }
-			else{answer2=" ";}
-			localStorage.setItem("answer2",answer2);
-			
+			var answer2= $("input[name='answer']:checked").val();
+			 localStorage.setItem("answer2",answer2);	
+			 console.log(answer2);	
 				}
 		});
 	</script>
@@ -50,19 +45,19 @@
 
 			<form action="q3.html" id="form2">
 				<div >
-					<input type="radio" id="option1" name="answer" >
+					<input type="radio" id="option1" name="answer" value="JavaScript is a lightweight, interpreted programming language.">
 					<label  for="n1" id="n11">JavaScript is a lightweight, interpreted programming language.</label>
 				</div>  
 				<div>
-					<input type="radio" id="option2" name="answer">
+					<input type="radio" id="option2" name="answer" value="JavaScript has object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages.">
 					<label for="n2" id="n22">JavaScript has object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages.</label>
 				</div>
 				<div>
-					<input type="radio" id="option3" name="answer" >
+					<input type="radio" id="option3" name="answer" value="The general-purpose core of the language has been embedded in Netscape, Internet Explorer, and other web browsers.">
 					<label for="n3" id="n33">The general-purpose core of the language has been embedded in Netscape, Internet Explorer, and other web browsers.</label>
 				</div>
 				<div>
-					<input type="radio" id="option4" name="answer">
+					<input type="radio" id="option4" name="answer" value="All of the above.">
 					<label for="n4" id="n44">All of the above.</label>
 				</div>
 				<br>

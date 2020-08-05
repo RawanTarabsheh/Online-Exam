@@ -23,14 +23,9 @@
 					window.location.href="q7.html";
 				}
 				// get answer
-			var answer6;
-			
-			if($("#option1").prop("checked")){answer6 ="option1"; }
-			else if($("#option2").prop("checked")){answer6 ="option2";}
-			else if($("#option3").prop("checked")){answer6 ="option3";}
-			else if($("#option4").prop("checked")){answer6 ="option4";}
-			else{answer6=" ";}
-			localStorage.setItem("answer6",answer6);
+			var answer6= $("input[name='answer']:checked").val();
+			 localStorage.setItem("answer6",answer6);	
+			 console.log(answer6);
 			}
 
 		});
@@ -51,7 +46,7 @@
 
 			<form action="q7.html" id="form6">
 				<div >
-					<input type="radio" id="option1" name="answer" >
+					<input type="radio" id="option1" name="answer" value="append()">
 					<label  for="n1" id="n11"> append()</label>
 				</div>  
 				<div>
@@ -59,11 +54,11 @@
 					<label for="n2" id="n22"> concat()</label>
 				</div>
 				<div>
-					<input type="radio" id="option3" name="answer" >
+					<input type="radio" id="option3" name="answer" value="concat()">
 					<label for="n3" id="n33">attach()</label>
 				</div>
 				<div>
-					<input type="radio" id="option4" name="answer">
+					<input type="radio" id="option4" name="answer" value="None of the above.">
 					<label for="n4" id="n44"> None of the above.</label>
 				</div>
 				<br>
